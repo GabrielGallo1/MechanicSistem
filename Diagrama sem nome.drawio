@@ -1,9 +1,60 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0" version="28.2.9">
   <diagram name="Página-1" id="uTZNbj9q_4ASz6jmLrzH">
-    <mxGraphModel>
+    <mxGraphModel dx="2318" dy="1105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-1" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Dashboard Sistem mechanic workshop&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#66B2FF);" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="710" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-2" value="Register Client&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF9933);" vertex="1" parent="1">
+          <mxGeometry x="240" y="400" width="200" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-3" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Name&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=light-dark(#FFFFFF,#000000);" vertex="1" parent="1">
+          <mxGeometry x="250" y="470" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-4" value="CPF" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-5" value="Contact" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="570" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-6" value="adress" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="620" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-7" value="Register vehicle&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF9933);" vertex="1" parent="1">
+          <mxGeometry x="455" y="400" width="200" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-8" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Model/Brand&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="470" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-9" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;year&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-10" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;car license plate&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="570" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-11" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Id cllient&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="620" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-12" value="Create work order&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF9933);" vertex="1" parent="1">
+          <mxGeometry x="670" y="400" width="200" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-13" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Id vehicle&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="470" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-14" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Type/Service&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-15" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Mechanic&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="570" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-16" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Status&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="620" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dM0rHeCuqPh2UdrkTh8Y-17" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Date start/end&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="670" width="110" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
