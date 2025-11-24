@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = ["public", "vehicles"]
+}
+
+model client {
+  id       String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name     String  @db.Char(100)
+  document String  @unique @db.Char(11)
+  contact  String  @unique @db.Char(9)
+  address  String? @db.Char(100)
+  car      car[]
+  truck    truck[]
+
+  @@schema("public")
+}
+
+model mechanic {
+  id         String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name       String       @db.Char(100)
+  document   String       @unique @db.Char(11)
+  contact    String       @unique @db.Char(9)
+  satuslegal Boolean?     @default(true)
+  workorders workorders[]
+
+  @@schema("public")
+}
+
+model workorders {
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  vehicle_type String    @db.VarChar(10)
+  idvehicle    String    @db.Uuid
+  idmechanic   String?   @db.Uuid
+  services     String?   @db.Char(255)
+  timeexecute  DateTime? @default(now()) @db.Timestamp(6)
+  status       String?   @db.Char(20)
+  mechanic     mechanic? @relation(fields: [idmechanic], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@schema("public")
+}
+
+model car {
+  id           String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  model        String  @db.Char(50)
+  year         Int?
+  licenseplate String  @unique @db.Char(7)
+  idcliente    String? @db.Uuid
+  client       client? @relation(fields: [idcliente], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@schema("vehicles")
+}
+
+model truck {
+  id           String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  model        String  @db.Char(50)
+  year         Int?
+  licenseplate String  @unique @db.Char(7)
+  idcliente    String? @db.Uuid
+  client       client? @relation(fields: [idcliente], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@schema("vehicles")
+}
