@@ -1,103 +1,196 @@
-🌐 MechanicSystem – Backend & Database
+# MechanicSystem
 
-Projeto composto por dois módulos independentes:
+Aplicação completa para gerenciamento de serviços mecânicos, composta por **backend em Node.js + Express + TypeScript** e **frontend em React + TypeScript**.  
+Utilizamos **Prisma ORM** com **PostgreSQL** como banco de dados principal.
 
-Database (PostgreSQL) com scripts automáticos.
+---
 
-Backend (Node.js + Express + TypeScript + Prisma) conectado ao banco via Docker Network.
+## 🚀 Tecnologias
 
-🗺️ Fluxograma do Projeto
+### Backend
+- Node.js
+- Express 4
+- TypeScript
+- ts-node-dev
+- Prisma ORM (somente PostgreSQL)
+- Zod (validação)
+- JWT (autenticação)
+- Bcrypt (hash de senha)
 
-👉 https://app.diagrams.net/#HGabrielGallo1%2FMechanicSistemDraw%2Fmain%2FDiagrama%20sem%20nome.drawio#%7B%22pageId%22%3A%22uTZNbj9q_4ASz6jmLrzH%22%7D
+### Frontend
+- React + Vite
+- TypeScript
+- React Router DOM
+- Axios
+- TailwindCSS
+- Zustand (gerenciamento de estado)
 
-🛠️ Usando a Aplicação
+### Banco de Dados
+- **PostgreSQL**
+- Prisma Client
 
-A aplicação é dividida em dois serviços separados, cada um com seu próprio docker-compose.yml:
+⚠️ **Importante:**  
+O Prisma funciona com MongoDB e SQLite, mas **esta aplicação está configurada exclusivamente para PostgreSQL**.  
+Nenhuma outra configuração foi implementada.
 
-/database → banco PostgreSQL
+---
 
-/backend → API REST com Node.js
+## 📁 Estrutura de Pastas
 
-Para que ambos funcionem, precisam estar na mesma Docker Network.
+```
+mechanicsystem/
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── middlewares/
+│   │   ├── database/
+│   │   ├── server.ts
+│   │   └── app.ts
+│   └── prisma/
+│       └── schema.prisma
+│
+└── frontend/
+    ├── src/
+    │   ├── pages/
+    │   ├── components/
+    │   ├── hooks/
+    │   ├── store/
+    │   └── main.tsx
+```
 
-🔌 1. Criar a Docker Network (Obrigatório)
+---
 
-Antes de subir qualquer container:
+## ⚙️ Como Rodar o Projeto
 
-docker network create mechanic_network
+### 1. Clone o repositório
+```
+git clone https://github.com/seu-user/mechanicsystem.git
+cd mechanicsystem
+```
 
+---
 
-Essa rede permite que o backend enxergue o banco mesmo estando em compose separados.
+## ▶️ Backend
 
-🛢️ 2. Subindo o Database
-
-📍 Local: database/docker-compose.yml
-
-Subir o container do PostgreSQL:
-cd database
-docker compose up -d
-
-O que acontece automaticamente:
-
-Criação do schema vehicles
-
-Criação das tabelas client, mechanic, vehicles.car, vehicles.truck, workOrders
-
-Inserção dos dados iniciais (seeds)
-
-Extensão pgcrypto habilitada
-
-Nome do serviço usado pelo backend:
-mechanic_system_db
-
-💻 3. Subindo o Backend
-
-📍 Local: backend/docker-compose.yml
-
-Antes de subir:
-
-Confirme se a DATABASE_URL está usando o nome do serviço do banco:
-
-DATABASE_URL=postgresql://postgres:1234@mechanic_system_db:5432/mechanicsystem
-
-Subir o backend:
+### 2. Instalar dependências
+```
 cd backend
-docker compose up -d
+npm install
+```
 
+### 3. Configurar variáveis de ambiente
+Crie o arquivo `.env`:
 
-A API estará disponível em:
+```
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/mechanicsystem?schema=public"
+JWT_SECRET="sua_chave"
+PORT=3333
+```
 
-http://localhost:3333
+### 4. Aplicar o schema no PostgreSQL
+```
+npx prisma migrate dev
+```
 
-🔗 Conexão entre Backend e Database
+### 5. Rodar o servidor
+```
+npm run dev
+```
 
-Os dois compose funcionam separados, mas se conectam porque:
+Servidor disponível em:  
+`http://localhost:3333`
 
-Ambos usam a mesma Docker Network:
+---
 
-mechanic_network
+## 🖥️ Frontend
 
+### 1. Instalar dependências
+```
+cd frontend
+npm install
+```
 
-O backend se conecta ao banco pelo nome do container do DB:
+### 2. Rodar o frontend
+```
+npm run dev
+```
 
-mechanic_system_db
+Aplicação disponível em:  
+`http://localhost:5173`
 
-🧪 Testando no Postman
-Clients
-GET  /client
-POST /client
+---
 
-Mechanics
-GET  /mechanic
-POST /mechanic
-PUT  /mechanic/:id
-DELETE /mechanic/:id
+## 📌 Rotas Principais (Backend)
 
-Vehicles
-GET  /vehicles/car
-GET  /vehicles/truck
+### **Clientes**
+```
+POST   /clients          -> Criar cliente
+GET    /clients          -> Listar todos
+GET    /clients/:id      -> Buscar por ID
+PUT    /clients/:id      -> Atualizar cliente
+DELETE /clients/:id      -> Remover cliente
+```
 
-Work Orders
-GET  /workorders
-POST /workorders
+### **Veículos**
+```
+POST   /vehicles         -> Criar veículo
+GET    /vehicles         -> Listar todos
+GET    /vehicles/:id     -> Buscar por ID
+PUT    /vehicles/:id     -> Atualizar veículo
+DELETE /vehicles/:id     -> Remover veículo
+```
+
+### **Ordens de Serviço (OS)**
+```
+POST   /orders           -> Criar OS
+GET    /orders           -> Listar OS
+GET    /orders/:id       -> Buscar OS por ID
+PUT    /orders/:id       -> Atualizar OS
+DELETE /orders/:id       -> Remover OS
+```
+
+### **Autenticação**
+```
+POST   /auth/register    -> Registrar usuário
+POST   /auth/login       -> Login e token JWT
+GET    /auth/me          -> Perfil do usuário autenticado
+```
+
+---
+
+## 🎨 Funcionalidades do Frontend
+
+- Login e autenticação JWT  
+- Listagem de clientes, veículos e ordens  
+- Criação e edição através de formulários  
+- Dashboard geral  
+- Consumo da API via Axios  
+- Interface com TailwindCSS  
+- Persistência de sessão com Zustand  
+
+---
+
+## 🧩 Como Contribuir
+
+```
+git checkout -b minha-feature
+git commit -m "Minha nova feature"
+git push origin minha-feature
+```
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso livre para estudos.
+
+---
+
+## 📌 Observação Final
+
+Esta aplicação **não foi configurada para MongoDB ou SQLite**.  
+O Prisma utilizado aqui é **exclusivamente compatível com PostgreSQL**, que é o único banco implementado.
 
