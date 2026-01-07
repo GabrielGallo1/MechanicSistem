@@ -1,15 +1,15 @@
-import styles from '../styles/background.module.css';
+import styles from './background.module.css';
 
 type Props = {
-  onOpenModal: () => void;
+  onSelect: (type: 'client' | 'workorders' | 'mechanic' | null) => void;
 };
 
-function Background({ onOpenModal }: Props) {
+function Background({ onSelect }: Props) {
   return (
     <main>
       <div className={styles.container}>
 
-        <div className={styles.box} onClick={onOpenModal}>
+        <div className={styles.box} onClick={() => onSelect('client')}>
           <div className={styles.boxImage1}>
             <img
               className={styles.images}
@@ -20,7 +20,7 @@ function Background({ onOpenModal }: Props) {
           <span className={styles.fontBackground}>Client</span>
         </div>
 
-        <div className={styles.box} onClick={onOpenModal}>
+        <div className={styles.box} onClick={() => onSelect('workorders')}>
           <div className={styles.boxImage1}>
             <img
               className={styles.images}
@@ -31,7 +31,7 @@ function Background({ onOpenModal }: Props) {
           <span className={styles.fontBackground}>Workorders</span>
         </div>
 
-        <div className={styles.box} onClick={onOpenModal}>
+        <div className={styles.box} onClick={() => onSelect('mechanic')}>
           <div className={styles.boxImage1}>
             <img
               className={styles.images}
