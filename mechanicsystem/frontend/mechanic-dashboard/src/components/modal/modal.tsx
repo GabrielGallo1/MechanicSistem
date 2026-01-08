@@ -13,7 +13,7 @@ function Modal({ isOpen, onClose, children }: modalProps) {
     <div className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.box}>
-            <button onClick={onClose}> Fechar </button>
+            <button className={styles.closeBtn} onClick={onClose}> X </button>
             {children}
         </div>
       </div>

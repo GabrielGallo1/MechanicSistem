@@ -3,9 +3,17 @@ import styles from './clientContent.module.css';
 
 function ClientContent() {
   return (
-    <div>
+    <div className={styles.container}>
       <h2 className={styles.h2}>Client System Modal Content</h2>
-      {/* Adicione aqui o conteúdo específico do sistema de cliente */}
+      <div className={styles.boxContent}>
+        <p>Client registration form will go here.</p>
+      </div>
+      <div className={styles.boxContent}>
+        <p>Client registration form will go here.</p>
+      </div>
+      <div className={styles.boxContent}>
+        <p>Client registration form will go here.</p>
+      </div>
     </div>
   );
 }
